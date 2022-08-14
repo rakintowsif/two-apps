@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  app1_nginx:
+    container_name: app1_nginx
+    build:
+      context: ./
+      dockerfile: deploy/web1.docker
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8081:80"
+    networks:
+      - network
+      
+      
+  app1:
+    container_name: app1
+    build:
+      context: ./
+      dockerfile: deploy/app1.docker
+    volumes:
+      - ./:/var/www
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge
