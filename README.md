@@ -10,9 +10,9 @@ Comes with [Docker](https://www.docker.com/) [Steps](#Installation) and [Local S
 - `git clone https://github.com/towsifrakin/two-apps.git`
 - `cd two-apps`
 - `docker-compose up -d`
---  to run the docker container
+  [to run the docker container]
 - `docker exec -ti app1 bash`
---  to enter into the app1 container
+  [to enter into the app1 container]
 - `cp .env.example .env && composer install && php artisan key:generate`
 - `docker-compose up -d`
 ##### Installation from poject root directory(App2)
